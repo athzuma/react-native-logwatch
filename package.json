@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/athzuma/react-native-logwatch/issues"
   },
-  "homepage": "https://github.com/athzuma/react-native-logwatch#readme"
+  "homepage": "https://github.com/athzuma/react-native-logwatch#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
 }
