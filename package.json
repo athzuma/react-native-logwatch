@@ -20,5 +20,7 @@
   },
   "homepage": "https://github.com/athzuma/react-native-logwatch#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
   }
 }
