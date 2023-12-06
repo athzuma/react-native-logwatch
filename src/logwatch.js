@@ -1,11 +1,11 @@
-// import getConfig from "./config";
+import getConfig from "./config";
 
 export default async function logWatch (path, message) {
-    // const config = await getConfig();
+    const config = await getConfig();
     const apiUrl = 'https://logwatch-402958ac818f.herokuapp.com/api';
     const body = {
       message: message,
-      app: process.env.LOGWATCH_APP,
+      app: config.app,
       path: path,
     };
   
