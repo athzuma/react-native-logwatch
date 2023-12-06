@@ -1,8 +1,6 @@
-const dotenv = require('dotenv');
 // import getConfig from "./config";
 
 export default async function logWatch (path, message) {
-    dotenv.config();
     // const config = await getConfig();
     const apiUrl = 'https://logwatch-402958ac818f.herokuapp.com/api';
     const body = {
