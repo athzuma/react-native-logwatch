@@ -1,11 +1,11 @@
 {
   "name": "react-logwatch",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "LogWatch SDK for React Native",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node_modules/.bin/rn-nodeify --install fs,path --hack"
+    "postinstall": "npm install fs path"
   },
   "repository": {
     "type": "git",
