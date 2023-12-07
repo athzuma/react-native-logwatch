@@ -1,20 +1,41 @@
-// export logWatch from './logwatch';
+let configs;
 
-const fs = require('fs');
-const path = require('path');
+function config(conf) {
+  configs = conf;
+}
 
-const lerConfiguracao = () => {
-  const caminhoConfig = path.join(process.cwd(), 'logwatch.config');
+async function log(message, path) {
+  const apiUrl = 'https://logwatch-402958ac818f.herokuapp.com/api';
+  const body = {
+    message: message,
+    app: configs.app,
+    path: path,
+  };
+
+  console.log(message);
 
   try {
-    const config = require(caminhoConfig);
-    // Faça o que for necessário com as configurações
-    console.log('Configurações lidas:', config);
+    const res = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        apiKey: configs.apiKey
+      },
+      body: JSON.stringify(body),
+    });
+
+    if (!res.ok) {
+      console.log('LOGWATCH: Error persisting log in cloud');
+    }
+
+    // const data = await res.json();
+    // console.log('Resposta da API:', data);
   } catch (erro) {
-    console.error('Erro ao ler configurações:', erro);
+    console.error('LOGWATCH: \n', erro.message);
   }
 };
 
-module.exports = {
-    logWatch,
+export const console = {
+  config,
+  log,
 };
