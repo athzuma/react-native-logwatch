@@ -1,11 +1,10 @@
 {
-  "name": "react-logwatch",
-  "version": "1.0.8",
+  "name": "react-native-logwatch",
+  "version": "1.0.9",
   "description": "LogWatch SDK for React Native",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm install fs path"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
