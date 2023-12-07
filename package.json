@@ -1,6 +1,6 @@
 {
   "name": "react-native-logwatch",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "LogWatch SDK for React Native",
   "main": "src/index.js",
   "scripts": {
@@ -20,5 +20,6 @@
   },
   "homepage": "https://github.com/athzuma/react-native-logwatch#readme",
   "dependencies": {
+    "react-native-fs": "^2.20.0"
   }
 }
